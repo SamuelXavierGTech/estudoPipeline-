@@ -19,3 +19,12 @@ jobs:
       with:
         java-version: '20'
         distribution: 'temurin'
+    - name: Docker Build & Push Action
+      uses: mr-smithers-excellent/docker-build-push@v6.4
+      with:
+        image: samuelxavier10/nomedaimagem 
+        tags: ${{ github.run_number}}
+        registry: docker.io
+        dockerfile: dockerfile
+        username: ${{secrets.DOCKER_USER}}
+        password: ${{secrets.DOCKER_PASSWORD}}
