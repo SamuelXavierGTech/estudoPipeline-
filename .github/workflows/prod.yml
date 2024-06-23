@@ -19,5 +19,3 @@ jobs:
       with:
         java-version: '20'
         distribution: 'temurin'
-    - name: Build with Ant
-      run: ant -noinput -buildfile build.xml
